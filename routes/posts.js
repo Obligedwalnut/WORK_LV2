@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Post = require("../schemas/post")
-const { verifyToken } = require("./token")
+const verifyToken = require("../middlewares/auth_middleware")
 
 // 전체 게시글 목록 조회
 // GET

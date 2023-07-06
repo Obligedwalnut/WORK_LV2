@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Comment = require('../schemas/comment');
-const { verifyToken } = require("./token")
+const verifyToken = require("../middlewares/auth_middleware")
 
 // 댓글 목록 조회
 router.get('/:postId', async (req, res) => {
